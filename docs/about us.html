@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Us — EcoLiana Handicrafts</title>
+  <meta name="description" content="EcoLiana Handicrafts: handcrafted, sustainable home décor made by rural women artisans from natural vines and leaves. Customize your pieces and support community empowerment.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--accent:#2f6f4e;--muted:#6b7280;--bg:#f7faf7;--card:#ffffff;--maxw:1100px}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial;background:var(--bg);color:#0f172a}
+    .container{max-width:var(--maxw);margin:0 auto;padding:28px}
+    header{background:#fff;border-bottom:1px solid #e6f0ea;position:sticky;top:0;z-index:30}
+    .top{display:flex;align-items:center;justify-content:space-between;padding:12px 20px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:52px;height:52px;border-radius:8px;background:linear-gradient(180deg,#d7f1de,#bfe8cb);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent)}
+    nav ul{display:flex;gap:16px;list-style:none;margin:0;padding:0}
+    nav a{text-decoration:none;color:var(--muted);font-weight:600}
+    nav a.active{color:var(--accent)}
+
+    .hero{padding:36px 0 12px}
+    .hero h1{margin:0 0 8px;font-size:28px}
+    .hero p{color:var(--muted);margin:0}
+
+    .content{display:grid;grid-template-columns:1fr 360px;gap:28px;margin-top:26px}
+    .card{background:var(--card);padding:22px;border-radius:12px;box-shadow:0 8px 20px rgba(15,23,42,0.06)}
+    .lead{font-size:16px;line-height:1.7;color:#10203a}
+    .small{color:var(--muted);font-size:14px}
+
+    .aside .material{display:flex;gap:12px;align-items:center;margin-bottom:14px}
+    .mat-thumb{width:72px;height:72px;border-radius:8px;overflow:hidden}
+    .mat-thumb img{width:100%;height:100%;object-fit:cover}
+    .cta{display:inline-block;margin-top:12px;padding:10px 14px;background:var(--accent);color:#fff;border-radius:10px;text-decoration:none;font-weight:700}
+
+    footer{margin-top:48px;padding:30px 0;text-align:center;color:var(--muted);font-size:14px}
+
+    @media(max-width:900px){.content{grid-template-columns:1fr}.hero h1{font-size:22px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="top container">
+      <div class="brand">
+        <div class="logo">EL</div>
+        <div>
+          <div style="font-weight:700">EcoLiana Handicrafts</div>
+          <div style="font-size:12px;color:var(--muted)">Nature-inspired, artisan-made</div>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>About Us</h1>
+      <p class="small">Handcrafted home décor made from natural vines, leaves and Natural materials — proudly crafted by rural women artisans.</p>
+    </section>
+
+    <section class="content">
+      <div class="card">
+        <p class="lead">At <strong>EcoLiana Handicrafts</strong>, we celebrate the harmony between nature and artistry. Our mission is to bring the serenity and beauty of nature into your home through the skilled craftsmanship of rural women artisans. Each creation is lovingly handcrafted from natural vines, leaves, and other eco-friendly materials — reflecting the essence of sustainable living and timeless design.</p>
+
+        <p class="lead">We believe that creativity should be as personal as it is purposeful. That’s why we offer you the freedom to customize every detail — from design and size to the choice of natural materials — making each piece truly one of a kind.</p>
+
+        <p class="lead">Every purchase you make goes beyond aesthetics — it becomes part of a meaningful journey. A share of each sale directly supports underprivileged rural women, helping them achieve financial independence and social empowerment. Together, we’re not just crafting décor; we’re nurturing a connection between nature, creativity, and community.</p>
+
+        <a class="cta" href="products.html">Explore Our Products</a>
+      </div>
+
+      <aside class="aside">
+        <div class="card">
+          <h3 style="margin-top:0">Why EcoLiana?</h3>
+          <div class="small" style="margin-bottom:12px">Nautral materials · Artisan-made · Customizable · Community support</div>
+
+          <div class="material">
+            <div class="mat-thumb"><img src="ab-1.jpg" alt="Hogla"></div>
+            <div>
+              <strong>Hogla</strong>
+              <div class="small">Hogla is a water-grass plant whose dried leaves are traditionally woven into strong, rustic, and environmentally friendly handicraft items.</div>
+            </div>
+          </div>
+
+          <div class="material">
+            <div class="mat-thumb"><img src="ab-2.jpg" alt="Jute"></div>
+            <div>
+              <strong>Jute</strong>
+              <div class="small">Jute is a natural, eco-friendly fiber known for its strength, softness, and versatility in handmade products.</div>
+            </div>
+          </div>
+
+          <div class="material">
+            <div class="mat-thumb"><img src="ab-3.jpg" alt="Bamboo"></div>
+            <div>
+              <strong>Bamboo</strong>
+              <div class="small">Bamboo is a fast-growing, sustainable plant widely used for its durability, light weight, and elegant natural texture.</div>
+            </div>
+          </div>
+
+          <a href="contact.html" class="cta" style="display:inline-block;margin-top:14px">Get in Touch</a>
+        </div>
+      </aside>
+    </section>
+
+    <footer>
+      © <span id="year"></span> EcoLiana Handicrafts · Crafted with care
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

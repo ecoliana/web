@@ -1,5 +1,242 @@
-<h1>ecoliana</h1>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EcoLiana — Home</title>
+  <meta name="description" content="Handmade natural handicrafts... — sustainable, nature-inspired designs, green products.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --accent:#2f6f4e;
+      --muted:#6b7280;
+      --card:#ffffff;
+      --bg:#f7faf7;
+      --maxw:1100px;
+      --shadow: 0 6px 18px rgba(15,23,42,0.08);
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:#0f172a;line-height:1.5}
+    .container{max-width:var(--maxw);margin:0 auto;padding:20px}
 
-Testing ongoing............
+    /* Top bar / header */
+    header{background:linear-gradient(90deg, #ffffff, #fbfff9);border-bottom:1px solid #e6f0ea;position:sticky;top:0;z-index:40}
+    .topbar{display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:52px;height:52px;border-radius:8px;background:linear-gradient(180deg,#d7f1de,#bfe8cb);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent)}
+    .brand h1{font-size:18px;margin:0}
+    nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600}
+    nav a:hover{color:var(--accent)}
 
-<marquee>docs</marquee>
+    /* Hero / Slider */
+    .hero{display:flex;gap:24px;align-items:center;padding:28px 0}
+    .slider{position:relative;flex:1;min-height:320px;border-radius:12px;overflow:hidden;box-shadow:var(--shadow);background:#fff}
+    .slides{display:flex;transition:transform 0.6s ease}
+    .slide{min-width:100%;display:flex;align-items:center;justify-content:center;padding:18px}
+    .slide img{width:100%;height:320px;object-fit:cover;display:block}
+    .arrow{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:8px;background:rgba(255,255,255,0.9);display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 12px rgba(2,6,23,0.08)}
+    .arrow.left{left:12px}
+    .arrow.right{right:12px}
+    .arrow svg{width:18px;height:18px}
+    .slider-dots{position:absolute;left:50%;transform:translateX(-50%);bottom:12px;display:flex;gap:8px}
+    .dot{width:10px;height:10px;border-radius:999px;background:rgba(15,23,42,0.15);cursor:pointer}
+    .dot.active{background:var(--accent)}
+
+    .hero-desc{width:320px}
+    .hero-desc h2{margin:0 0 8px 0}
+    .hero-desc p{color:var(--muted);margin:0 0 12px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:8px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600}
+
+    /* Product gallery */
+    .products{margin-top:28px;background:transparent}
+    .products .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .card{background:var(--card);padding:12px;border-radius:10px;box-shadow:var(--shadow);text-align:center}
+    .card img{width:100%;height:160px;object-fit:cover;border-radius:8px}
+    .card h3{margin:10px 0 6px;font-size:15px}
+    .tag{display:inline-block;padding:6px 8px;border-radius:999px;background:#f1f6f2;color:var(--accent);font-weight:600;font-size:12px}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .hero{flex-direction:column}
+      .hero-desc{width:100%}
+      .products .grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:480px){
+      nav ul{display:none}
+      .container{padding:12px}
+      .card img{height:120px}
+    }
+
+    /* Fixed contact bar */
+    .contact-bar{position:fixed;left:0;right:0;bottom:0;background:linear-gradient(90deg,#ffffff,#f6fff8);border-top:1px solid #e6f0ea;padding:10px 16px;display:flex;align-items:center;justify-content:center;gap:20px}
+    .contact-bar .cta{background:var(--accent);color:#fff;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:700}
+    .contact-bar small{color:var(--muted)}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="topbar container">
+      <div class="brand">
+        <div class="logo">EL</div>
+        <div>
+          <h1>EcoLiana</h1>
+          <div style="font-size:10px;color:var(--muted)">Ecofriendly handmade handicrafts</div>
+        </div>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about us.html">About</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="slider" id="slider">
+        <div class="slides" id="slides">
+          <div class="slide"><img src="sl0.jpg" alt="Handicraft 1"></div>
+          <div class="slide"><img src="sl2.jpg" alt="Handicraft 1"></div>
+          <div class="slide"><img src="sl3.jpg" alt="Handicraft 2"></div>
+          <div class="slide"><img src="sl4.jpg" alt="Handicraft 3"></div>
+          <div class="slide"><img src="sl5.jpg" alt="Handicraft 4"></div>
+        </div>
+
+        <div class="arrow left" id="prev" aria-label="Previous">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M15 18l-6-6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </div>
+        <div class="arrow right" id="next" aria-label="Next">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 6l6 6-6 6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </div>
+
+        <div class="slider-dots" id="dots"></div>
+      </div>
+
+      <aside class="hero-desc">
+        <h2>Inspired by Nature...</h2>
+        <p style= "font-size:12px;margin:0; text-align: justify; ">Do you love nature and seek to bring its serenity into your home? At EcoLiana Handicrafts, we transform this passion into beautifully crafted, eco-friendly home décor. Each piece is handmade by skilled rural women using natural green leaves, fibers, cane, bamboo, jute and other sustainable materials. Our collection includes baskets, mats, decorative items, and more — all designed to add a touch of rustic charm and warmth to your living space. By choosing our handcrafted products, you support sustainable practices, empower rural artisans, and bring authentic, nature-inspired décor to your home.</p>
+       	
+	<a class="btn" href="products.html">Browse Products</a>
+	</aside>
+    </section>
+
+    <section class="products">
+      <h2 style="margin:16px 0 12px">Products</h2>
+      <div class="grid">
+        <div class="card">
+          <img src="1_pro.jpg" alt="Product 1">
+          <h3>Fruit Basket</h3>
+          <div class="tag">F1</div>
+        </div>
+        <div class="card">
+          <img src="2_pro.jpg" alt="Product 2">
+          <h3>Basket</h3>
+          <div class="tag">B1</div>
+        </div>
+         <div class="card">
+          <img src="5_pro.jpg" alt="Product 4">
+          <h3>Placemat</h3>
+          <div class="tag">P-9</div>
+        </div>
+
+        <div class="card">
+          <img src="3_pro.jpg" alt="Product 3">
+          <h3>Basket</h3>
+          <div class="tag">B2</div>
+        </div>
+       
+        <div class="card">
+          <img src="4_pro.jpg" alt="Product 5">
+          <h3>Basket</h3>
+          <div class="tag">B4</div>
+        </div>
+        <div class="card">
+          <img src="7_pro.jpg" alt="Product 6">
+          <h3>Basket</h3>
+          <div class="tag">B5</div>
+        </div>
+        <div class="card">
+          <img src="6_pro.jpg" alt="Product 7">
+          <h3>Laundry Basket</h3>
+          <div class="tag">L1</div>
+        </div>
+        <div class="card">
+          <img src="8_pro.jpg" alt="Product 8">
+          <h3>Cat House</h3>
+          <div class="tag">CH1</div>
+        </div>
+      </div>
+    </section>
+
+    <div style="height:80px"></div>
+  </main>
+
+  <div class="contact-bar" role="contentinfo">
+    <div style="display:flex;align-items:center;gap:12px">
+      <div>
+        <strong>Contact us:</strong>
+        <div style="font-size:12px;color:var(--muted)">ecoliana25@gmail.com | www.ecoliana.com | whatsapp: +88013000 0000</div>
+      </div>
+    </div>
+    <a href="contact.html" class="cta">Get in touch</a>
+  </div>
+
+  <script>
+    (function(){
+      const slidesEl = document.getElementById('slides');
+      const slides = Array.from(document.querySelectorAll('.slide'));
+      const prev = document.getElementById('prev');
+      const next = document.getElementById('next');
+      const dotsEl = document.getElementById('dots');
+      let idx = 0;
+      const total = slides.length;
+      const intervalMs = 3000; // 4 seconds
+      let timer = null;
+
+      // create dots
+      for(let i=0;i<total;i++){
+        const d = document.createElement('div');
+        d.className='dot'+(i===0?' active':'');
+        d.dataset.index = i;
+        d.addEventListener('click', ()=>{goTo(parseInt(d.dataset.index));resetTimer();});
+        dotsEl.appendChild(d);
+      }
+
+      function update(){
+        slidesEl.style.transform = `translateX(-${idx*100}%)`;
+        Array.from(dotsEl.children).forEach((d,i)=>d.classList.toggle('active', i===idx));
+      }
+      function prevSlide(){ idx = (idx-1+total)%total; update(); }
+      function nextSlide(){ idx = (idx+1)%total; update(); }
+      function goTo(i){ idx = i%total; update(); }
+
+      prev.addEventListener('click', ()=>{ prevSlide(); resetTimer(); });
+      next.addEventListener('click', ()=>{ nextSlide(); resetTimer(); });
+
+      function startTimer(){ timer = setInterval(()=>{ nextSlide(); }, intervalMs); }
+      function resetTimer(){ clearInterval(timer); startTimer(); }
+
+      // pause on hover
+      const slider = document.getElementById('slider');
+      slider.addEventListener('mouseenter', ()=>{ clearInterval(timer); });
+      slider.addEventListener('mouseleave', ()=>{ resetTimer(); });
+
+      // init
+      update();
+      startTimer();
+
+      // accessibility: keyboard
+      document.addEventListener('keydown', (e)=>{
+        if(e.key === 'ArrowLeft') { prevSlide(); resetTimer(); }
+        if(e.key === 'ArrowRight') { nextSlide(); resetTimer(); }
+      });
+    })();
+  </script>
+</body>
+</html>
