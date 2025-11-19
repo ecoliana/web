@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — EcoLiana Handicrafts</title>
+  <meta name="description" content="Get in touch with EcoLiana — send a message or use our direct contact details.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--accent:#2f6f4e;--muted:#6b7280;--bg:#f7faf7;--card:#fff;--maxw:720px}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial;background:var(--bg);color:#0f172a;display:flex;justify-content:center;align-items:flex-start;padding:28px}
+    .wrap{width:100%;max-width:var(--maxw)}
+    .card{background:var(--card);padding:22px;border-radius:12px;box-shadow:0 10px 30px rgba(15,23,42,0.06)}
+    h1{margin:0 0 6px;font-size:20px}
+    p.lead{margin:0 0 12px;color:var(--muted)}
+
+    form{display:flex;flex-direction:column;gap:10px}
+    label{font-size:13px;color:var(--muted)}
+    input[type=text],input[type=email],textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #e6f0ea;font-size:14px}
+    textarea{min-height:120px;resize:vertical}
+    .btn{background:var(--accent);color:#fff;padding:10px 14px;border-radius:10px;border:none;font-weight:700;cursor:pointer}
+
+    .contact-own{margin-top:16px;border-top:1px dashed #eef6ef;padding-top:14px}
+    .detail{display:flex;gap:8px;align-items:flex-start;margin-bottom:8px}
+    .detail strong{width:90px;color:var(--accent)}
+    .muted{color:var(--muted);font-size:13px}
+
+    @media(max-width:520px){body{padding:18px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>Contact EcoLiana</h1>
+      <p class="lead">Send us a message below or use our direct contact details.</p>
+
+      <form id="contactForm" onsubmit="handleSubmit(event)">
+        <label for="name">Name *</label>
+        <input id="name" name="name" type="text" required placeholder="Your full name">
+
+        <label for="email">Email *</label>
+        <input id="email" name="email" type="email" required placeholder="you@example.com">
+
+        <label for="message">Message *</label>
+        <textarea id="message" name="message" required placeholder="Write your message... e.g. order enquiry, custom request, wholesale"></textarea>
+
+        <div style="display:flex;gap:10px;align-items:center;margin-top:6px">
+          <button type="submit" class="btn">Send Message</button>
+          <button type="button" class="btn" style="background:#4b5563" onclick="clearForm()">Clear</button>
+        </div>
+      </form>
+
+      <div class="contact-own">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <div>
+            <div class="muted" style="font-weight:600">Direct contact</div>
+            <div style="height:10px"></div>
+            <div class="detail"><strong>Phone:</strong><div>+880 1977383532</div></div>
+            <div class="detail"><strong>Email:</strong><div><a href="mailto:info@ecoliana.com">ecoliana25@gmail.com</a></div></div>
+            <div class="detail"><strong>Address:</strong><div>House# 53, Unit# A1, Road#13, Sector# 14,
+Uttara, Dhaka, Bangladesh-1230</div></div>
+          </div>
+          <div style="text-align:right" class="muted">
+            <div style="font-weight:700">Office hours</div>
+            <div style="height:6px"></div>
+            <div>Sat–Thu 09:00–18:00</div>
+            <div>Closed Friday</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:12px;color:var(--muted);font-size:13px">© <span id="yr"></span> EcoLiana Handicrafts</div>
+  </div>
+
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    function clearForm(){ document.getElementById('contactForm').reset(); }
+
+    function handleSubmit(e){
+      e.preventDefault();
+      const f = e.target;
+      const data = {name:f.name.value.trim(), email:f.email.value.trim(), message:f.message.value.trim()};
+      if(!data.name || !data.email || !data.message){ alert('Please fill all required fields.'); return; }
+
+      // Demo: open mail client as fallback
+      const mailto = `mailto:info@ecoliana.com?subject=${encodeURIComponent('Contact from '+data.name)}&body=${encodeURIComponent(data.message+'\n\nContact email: '+data.email)}`;
+      // Try to open user's mail client
+      window.location.href = mailto;
+
+      // For a production site, replace above with fetch() to your server or Formspree endpoint.
+    }
+  </script>
+</body>
+</html>
