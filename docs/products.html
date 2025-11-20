@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Products — EcoLiana Handicrafts</title>
+  <meta name="description" content="Browse our collection of handcrafted, sustainable home décor products. 4 columns x 4 rows gallery with product image, name and product code.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--accent:#2f6f4e;--muted:#6b7280;--bg:#f7faf7;--card:#fff;--maxw:1200px}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial;background:var(--bg);color:#0f172a}
+    .container{max-width:var(--maxw);margin:0 auto;padding:28px}
+    header{background:#fff;border-bottom:1px solid #e6f0ea;position:sticky;top:0;z-index:30}
+    .top{display:flex;align-items:center;justify-content:space-between;padding:12px 20px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:48px;height:48px;border-radius:8px;background:linear-gradient(180deg,#d7f1de,#bfe8cb);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent)}
+    nav ul{display:flex;gap:14px;list-style:none;margin:0;padding:0}
+    nav a{text-decoration:none;color:var(--muted);font-weight:600}
+    nav a.active{color:var(--accent)}
+
+    .controls{display:flex;align-items:center;justify-content:space-between;margin:18px 0}
+    .controls .title{font-size:20px;font-weight:700}
+    .controls .search input{padding:8px 10px;border-radius:8px;border:1px solid #e6f0ea}
+
+    .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .card{background:var(--card);padding:12px;border-radius:12px;box-shadow:0 8px 20px rgba(15,23,42,0.06);text-align:center;transition:transform .18s ease,box-shadow .18s ease}
+    .card:hover{transform:translateY(-6px);box-shadow:0 16px 36px rgba(15,23,42,0.10)}
+    .card img{width:100%;height:180px;object-fit:cover;border-radius:8px}
+    .pname{margin:10px 0 6px;font-size:15px;font-weight:600}
+    .pcode{color:var(--muted);font-size:13px}
+
+    .pagination{display:flex;gap:10px;justify-content:center;margin-top:22px}
+    .page{padding:8px 12px;border-radius:8px;background:#fff;border:1px solid #e6f0ea}
+
+    footer{margin-top:36px;padding:28px 0;text-align:center;color:var(--muted);font-size:14px}
+
+    @media(max-width:1000px){.grid{grid-template-columns:repeat(3,1fr)}}
+    @media(max-width:700px){.grid{grid-template-columns:repeat(2,1fr)}.card img{height:150px}}
+    @media(max-width:420px){.grid{grid-template-columns:repeat(1,1fr)}.controls{flex-direction:column;gap:10px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="top container">
+      <div class="brand">
+        <div class="logo">EL</div>
+        <div>
+          <div style="font-weight:700">EcoLiana Handicrafts</div>
+          <div style="font-size:12px;color:var(--muted)">Nature-inspired, artisan-made</div>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="products.html" class="active">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="controls">
+      <div class="title">Our Products</div>
+      <div class="search"><input id="search" type="search" placeholder="Search products by name or code..."></div>
+    </div>
+
+    <section class="grid" id="productGrid">
+      <!-- 16 product cards -->
+      <div class="card" data-name="Basket" data-code="EL-001">
+        <img src="pro-01.jpg" alt="Woven Palm Basket">
+        <div class="pname">Basket</div>
+        <div class="pcode">Product code: <strong>EL-001</strong></div>
+      </div>
+
+      <div class="card" data-name="Handmade Jute Mat" data-code="EL-002">
+        <img src="pro-02.jpg" alt="Handmade Jute Mat">
+        <div class="pname">Basket</div>
+        <div class="pcode">Product code: <strong>EL-002</strong></div>
+      </div>
+
+      <div class="card" data-name="Bamboo Wall Décor" data-code="EL-003">
+        <img src="pro-03.jpg" alt="Bamboo Wall Decor">
+        <div class="pname">Basket</div>
+        <div class="pcode">Product code: <strong>EL-003</strong></div>
+      </div>
+
+      <div class="card" data-name="Rattan Fruit Bowl" data-code="EL-004">
+        <img src="pro-04.jpg" alt="Rattan Fruit Bowl">
+        <div class="pname">Basket</div>
+        <div class="pcode">Product code: <strong>EL-004</strong></div>
+      </div>
+
+      <div class="card" data-name="Seagrass Tote" data-code="EL-005">
+        <img src="pro-05.jpg" alt="Seagrass Tote">
+        <div class="pname">Basket</div>
+        <div class="pcode">Product code: <strong>EL-005</strong></div>
+      </div>
+
+      <div class="card" data-name="Hand-stitched Cushion" data-code="EL-006">
+        <img src="pro-06.jpg" alt="Hand-stitched Cushion">
+        <div class="pname">Basket</div>
+        <div class="pcode">Product code: <strong>EL-006</strong></div>
+      </div>
+
+      <div class="card" data-name="Wooden Tea Tray" data-code="EL-007">
+        <img src="pro-07.jpg" alt="Wooden Tea Tray">
+        <div class="pname">Basket</div>
+        <div class="pcode">Product code: <strong>EL-007</strong></div>
+      </div>
+
+      <div class="card" data-name="Eco Coasters (Set)" data-code="EL-008">
+        <img src="pro-08.jpg" alt="Eco Coasters">
+        <div class="pname">Basket</div>
+        <div class="pcode">Product code: <strong>EL-008</strong></div>
+      </div>
+
+      <div class="card" data-name="Hogla Wall Basket" data-code="EL-009">
+        <img src="pro-09.jpg" alt="Hogla Wall Basket">
+        <div class="pname">Basket</div>
+        <div class="pcode">Product code: <strong>EL-009</strong></div>
+      </div>
+
+      <div class="card" data-name="Jute Storage Bag" data-code="EL-010">
+        <img src="pro-10.jpg" alt="Jute Storage Bag">
+        <div class="pname">Basket</div>
+        <div class="pcode">Product code: <strong>EL-010</strong></div>
+      </div>
+
+      <div class="card" data-name="Bamboo Cutlery Set" data-code="EL-011">
+        <img src="pro-11.jpg" alt="Bamboo Cutlery Set">
+        <div class="pname">Basket</div>
+        <div class="pcode">Product code: <strong>EL-011</strong></div>
+      </div>
+
+      <div class="card" data-name="Seagrass Planter" data-code="EL-012">
+        <img src="pro-12.jpg" alt="Seagrass Planter">
+        <div class="pname">Basket</div>
+        <div class="pcode">Product code: <strong>EL-012</strong></div>
+      </div>
+
+      <div class="card" data-name="Rattan Mirror Frame" data-code="EL-013">
+        <img src="pro-13.jpg" alt="Rattan Mirror Frame">
+        <div class="pname">Basket</div>
+        <div class="pcode">Product code: <strong>EL-013</strong></div>
+      </div>
+
+      <div class="card" data-name="Handwoven Table Runner" data-code="EL-014">
+        <img src="pro-14.jpg" alt="Handwoven Table Runner">
+        <div class="pname">Basket</div>
+        <div class="pcode">Product code: <strong>EL-014</strong></div>
+      </div>
+
+      <div class="card" data-name="Palm Leaf Lampshade" data-code="EL-015">
+        <img src="pro-15.jpg" alt="Palm Leaf Lampshade">
+        <div class="pname">Basket</div>
+        <div class="pcode">Product code: <strong>EL-015</strong></div>
+      </div>
+
+      <div class="card" data-name="Mini Hogla Basket" data-code="EL-016">
+        <img src="pro-16.jpg" alt="Mini Hogla Basket">
+        <div class="pname">Basket</div>
+        <div class="pcode">Product code: <strong>EL-016</strong></div>
+      </div>
+	
+	<div class="card" data-name="Rattan Mirror Frame" data-code="EL-013">
+        <img src="pro-17.jpg" alt="Rattan Mirror Frame">
+        <div class="pname">Basket</div>
+        <div class="pcode">Product code: <strong>EL-017</strong></div>
+      </div>
+
+      <div class="card" data-name="Handwoven Table Runner" data-code="EL-014">
+        <img src="pro-18.jpg" alt="Handwoven Table Runner">
+        <div class="pname">Basket</div>
+        <div class="pcode">Product code: <strong>EL-018</strong></div>
+      </div>
+
+      <div class="card" data-name="Palm Leaf Lampshade" data-code="EL-015">
+        <img src="pro-19.jpg" alt="Palm Leaf Lampshade">
+        <div class="pname">Basket</div>
+        <div class="pcode">Product code: <strong>EL-019</strong></div>
+      </div>
+
+      <div class="card" data-name="Mini Hogla Basket" data-code="EL-016">
+        <img src="pro-20.jpg" alt="Mini Hogla Basket">
+        <div class="pname">Basket</div>
+        <div class="pcode">Product code: <strong>EL-020</strong></div>
+      </div>
+
+
+    </section>
+
+    <div class="pagination">
+      <div class="page">« Prev</div>
+      <div class="page">1</div>
+      <div class="page">2</div>
+      <div class="page">Next »</div>
+    </div>
+
+    <footer>
+      © <span id="yr"></span> EcoLiana Handicrafts · All Rights Reserved
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    // Simple client-side search by name or code
+    const input = document.getElementById('search');
+    const cards = Array.from(document.querySelectorAll('.card'));
+    input.addEventListener('input', ()=>{
+      const q = input.value.trim().toLowerCase();
+      cards.forEach(c=>{
+        const name = c.dataset.name.toLowerCase();
+        const code = c.dataset.code.toLowerCase();
+        if(!q || name.includes(q) || code.includes(q)) c.style.display = '';
+        else c.style.display = 'none';
+      })
+    });
+  </script>
+</body>
+</html>
